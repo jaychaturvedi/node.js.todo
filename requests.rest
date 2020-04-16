@@ -1,0 +1,8 @@
+POST http://localhost:5000/api/todos/7
+
+{
+    "description" : 'chup kali randi',
+}
+
+###
+GET http://localhost:5000/api/todos
