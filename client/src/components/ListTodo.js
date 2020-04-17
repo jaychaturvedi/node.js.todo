@@ -1,4 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import EditTodo from './EditTodo'
+
 
 function ListTodo() {
 
@@ -28,7 +30,6 @@ function ListTodo() {
         } catch (err) {
             console.log(err.message);
         }
-
     };
 
     useEffect(() => {
@@ -53,14 +54,14 @@ function ListTodo() {
             </thead>
             <tbody>
                 {/* <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr> */}
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                    </tr> */}
                 {todos.map(todo => (
                     <tr key={todo.todo_id}>
                         <td>{todo.description}</td>
-                        <td>Edit</td>
+                <td> <EditTodo todo = {todo}/></td>
                         <td><button className="btn btn-danger" onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
                     </tr>
 
