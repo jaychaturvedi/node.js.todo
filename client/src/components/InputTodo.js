@@ -6,7 +6,6 @@ const InputTodo = () => {
         e.preventDefault();
         try {
             const body = {description}
-            console.log("this is my body" + body )
             const response = await fetch("http://localhost:5000/api/todos", {
                 method:"POST",
                 headers : {
